@@ -1,0 +1,770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <!-- If you delete this meta tag, the ground will open and swallow you. -->
+    <meta name="viewport" content="width=device-width"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>La Silla Mail template</title>
+
+    <style type="text/css">
+        /* -------------------------------------
+		GLOBAL
+------------------------------------- */
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: none;
+            font-family: "Roboto", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+            width: 100% !important;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* -------------------------------------
+                ELEMENTS
+        ------------------------------------- */
+        a {
+            color: #44a5db;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #44a5db;
+            padding: 0;
+            font-weight: bold;
+            margin-right: 10px;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+
+        .callout a {
+            font-weight: bold;
+            color: #2BA6CB;
+        }
+
+        /* -------------------------------------
+                HEADER
+        ------------------------------------- */
+        table.head-wrap {
+            width: 100%;
+        }
+
+        .header.container table td.logo {
+            padding: 15px;
+        }
+
+        .header.container table td.label {
+            padding: 15px;
+            padding-left: 0px;
+        }
+
+        /* -------------------------------------
+                BODY
+        ------------------------------------- */
+        table.body-wrap {
+            width: 100%;
+        }
+
+        /* -------------------------------------
+                FOOTER
+        ------------------------------------- */
+        table.footer-wrap {
+            width: 100%;
+            clear: both !important;
+            background-color: #000;
+            margin-top: 40px
+        }
+
+        .footer-wrap .container td.content p {
+            border-top: 1px solid rgb(215, 215, 215);
+            padding-top: 15px;
+        }
+
+        .footer-wrap .container td.content p {
+            font-size: 10px;
+            font-weight: bold;
+
+        }
+
+        /* -------------------------------------
+                TYPOGRAPHY
+        ------------------------------------- */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", "Roboto", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: #444848;
+        }
+
+        h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+            font-size: 60%;
+            color: #6f6f6f;
+            line-height: 0;
+            text-transform: none;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 44px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 34px;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 25px;
+        }
+
+        h4 {
+            font-weight: 700;
+            font-size: 27px;
+            margin-bottom: 5px;
+        }
+
+        h5 {
+            font-weight: 900;
+            font-size: 17px;
+            margin-bottom: 0;
+        }
+
+        h6 {
+            font-weight: 900;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #444;
+        }
+
+        h3.serif {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-weight: 400;
+        }
+
+        .collapse {
+            margin: 0 !important;
+        }
+
+        p, ul {
+            margin-bottom: 10px;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444848;
+        }
+
+        p.lead {
+            font-size: 20px;
+        }
+
+        p.last {
+            margin-bottom: 0px;
+        }
+
+        p.serif {
+            font-family: Georgia, Times, "Times New Roman", serif
+        }
+
+        ul li {
+            margin-left: 5px;
+            list-style-position: inside;
+        }
+
+        /* -------------------------------------
+                SIDEBAR
+        ------------------------------------- */
+        ul.sidebar {
+            background: #ebebeb;
+            display: block;
+            list-style-type: none;
+        }
+
+        ul.sidebar li {
+            display: block;
+            margin: 0;
+        }
+
+        ul.sidebar li a {
+            text-decoration: none;
+            color: #666;
+            padding: 10px 16px;
+            /* 	font-weight:bold; */
+            margin-right: 10px;
+            /* 	text-align:center; */
+            cursor: pointer;
+            border-bottom: 1px solid #777777;
+            border-top: 1px solid #FFFFFF;
+            display: block;
+            margin: 0;
+        }
+
+        ul.sidebar li a.last {
+            border-bottom-width: 0px;
+        }
+
+        ul.sidebar li a h1, ul.sidebar li a h2, ul.sidebar li a h3, ul.sidebar li a h4, ul.sidebar li a h5, ul.sidebar li a h6, ul.sidebar li a p {
+            margin-bottom: 0 !important;
+        }
+
+        /* ---------------------------------------------------
+                RESPONSIVENESS
+                Nuke it from orbit. It's the only way to be sure.
+        ------------------------------------------------------ */
+
+        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+        .container {
+            display: block !important;
+            max-width: 600px !important;
+            margin: 0 auto !important; /* makes it centered */
+            clear: both !important;
+        }
+
+        /* This should also be a block element, so that it will fill 100% of the .container */
+        .content {
+            padding: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Let's make sure tables in the content area are 100% wide */
+        .content table {
+            width: 100%;
+        }
+
+        .content-head, .content-head-grey {
+            margin: 4em -10% 3em;
+            border-top: 1px solid #44a5db;
+            color: #44a5db;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            width: 120% !important;
+        }
+
+        .content-head-grey {
+            border-color: #ccc;
+        }
+
+        /* Odds and ends */
+        .column {
+            width: 300px;
+            float: left;
+        }
+
+        .column tr td {
+            padding: 15px;
+        }
+
+        .column-wrap {
+            padding: 0 !important;
+            margin: 0 auto;
+            max-width: 600px !important;
+        }
+
+        .column table {
+            width: 100%;
+        }
+
+        .social .column {
+            width: 280px;
+            min-width: 279px;
+            float: left;
+        }
+
+        /* Be sure to place a .clear element after each set of columns, just to be safe */
+        .clear {
+            display: block;
+            clear: both;
+        }
+
+        table.debate {
+            border-radius: 15px;
+            padding: 15px;
+            border: 1px solid #cccccc;
+        }
+
+        table.debate p {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-style: italic;
+        }
+
+        table.debate .vs-col {
+            text-align: center;
+            position: relative;
+        }
+
+        table.debate .vs {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            border-radius: 50%;
+            border: 1px solid #898d90;
+            background-color: #ffffff;
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            position: relative;
+            padding-top: 8px;
+            box-sizing: border-box;
+        }
+
+        table.debate .line {
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: #898d90;
+            margin: auto;
+            left: 50%;
+            top: 0;
+        }
+
+        .debate-avatar {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+
+        .debate-date {
+            color: #898d90;
+            font-size: 12px;
+        }
+
+        .debate-btn {
+            background-color: #44a5db;
+            color: #fff;
+            margin: 14px 0 0;
+            padding: 5px 9px;
+            display: inline-block;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .debate-btn img {
+            float: left;
+            margin-right: 5px;
+        }
+
+        .debate-btn span {
+            display: block;
+            float: left;
+            margin-top: 5px;
+        }
+
+        .transparent-btn {
+            border: 1px solid #44a5db;
+            border-radius: 4px;
+            padding: 12px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+            margin: 20px 0 40px;
+            display: inline-block;
+        }
+
+        .transparent-btn.last {
+            margin-bottom: 0;
+        }
+
+        .content-logos td {
+            padding: 10px;
+        }
+        /* -------------------------------------------
+                PHONE
+                For clients that support media queries.
+                Nothing fancy.
+        -------------------------------------------- */
+        @media only screen and (max-width: 600px) {
+
+            a[class="btn"] {
+                display: block !important;
+                margin-bottom: 10px !important;
+                background-image: none !important;
+                margin-right: 0 !important;
+            }
+
+            div[class="column"] {
+                width: auto !important;
+                float: none !important;
+            }
+
+            table.social div[class="column"] {
+                width: auto !important;
+            }
+
+        }
+
+        @media only screen and (max-width: 720px) {
+            .content-head, .content-head-grey {
+                width: 100% !important;
+                margin: 4em 0 3em;
+            }
+        }
+    </style>
+
+</head>
+
+<body bgcolor="#FFFFFF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+
+<table class="body-wrap" bgcolor="">
+    <tr>
+        <td></td>
+        <td class="container" align="" bgcolor="#FFFFFF">
+
+            <!-- content -->
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>
+                            <img
+                                src="http://lasillavacia.com/sites/all/themes/lasillavacia/imagesboletin1/logo_silla_logosimbolo.png"
+                                alt="" width="300" style="margin: 40px auto 60px; display: block">
+                            <p style="font-size:12px;color:#b2babe;font-family:'Roboto Slab',serif; margin: -80px 0 80px 54%;">
+                                Martes, Febrero 7, 2017</p>
+                            <h2>Títolo resumende esta semana</h2>
+                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et.</p>
+                            <p class="lead">Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna
+                                mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam
+                                quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies
+                                vehicula ut id elit.</p>
+
+                            <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis,
+                                est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cum
+                                sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras
+                                mattis consectetur purus sit amet fermentum.</p>
+
+                            <p class="lead">Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus
+                                mollis interdum. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a
+                                ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod
+                                semper.</p>
+                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Consectetur adipisicing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        </td>
+                    </tr>
+                </table>
+            </div><!-- /content -->
+
+            <!-- content -->
+            <div class="content">
+                <table class="content-head" bgcolor="">
+                    <tr>
+                        <td>QUE LEER ESTA SEMANA</td>
+                    </tr>
+                </table>
+                <table bgcolor="">
+                    <tr>
+                        <td class="small" width="25%" style="vertical-align: top; padding-right:10px;"><img
+                            src="http://placehold.it/150x107"/></td>
+                        <td>
+                            <h4>Title Ipsum</h4>
+                            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. </p>
+                            <a class="btn">VER LA HISTORIA COMPLETA &raquo;</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </div><!-- /content -->
+
+            <!-- content -->
+            <div class="content">
+                <table bgcolor="">
+                    <tr>
+                        <td class="small" width="25%" style="vertical-align: top; padding-right:10px;"><img
+                            src="http://placehold.it/150x107"/></td>
+                        <td>
+                            <h4>Title Ipsum</h4>
+                            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. </p>
+                            <a class="btn">VER LA HISTORIA COMPLETA &raquo;</a>
+                        </td>
+                    </tr>
+                </table>
+            </div><!-- /content -->
+
+            <!-- content -->
+            <div class="content">
+                <table bgcolor="">
+                    <tr>
+                        <td class="small" width="25%" style="vertical-align: top; padding-right:10px;"><img
+                            src="http://placehold.it/150x107"/></td>
+                        <td>
+                            <h4>Title Ipsum</h4>
+                            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. </p>
+                            <a class="btn">VER LA HISTORIA COMPLETA &raquo;</a>
+                        </td>
+                    </tr>
+                </table>
+            </div><!-- /content -->
+
+            <!-- content -->
+            <div class="content">
+                <table class="content-head" bgcolor="">
+                    <tr>
+                        <td>QUE LEER ESTA SEMANA</td>
+                    </tr>
+                </table>
+                <table bgcolor="">
+                    <tr>
+                        <td>
+                            <h4>Title Ipsum</h4>
+                            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. </p>
+                            <a class="btn">LEER ESTA PUBLICACIÓN &raquo;</a>
+                        </td>
+                    </tr>
+                </table>
+            </div><!-- /content -->
+
+            <!-- content -->
+            <div class="content">
+                <table bgcolor="">
+                    <tr>
+                        <td>
+                            <h4>Title Ipsum</h4>
+                            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. </p>
+                            <a class="btn">LEER ESTA PUBLICACIÓN &raquo;</a>
+                        </td>
+                    </tr>
+                </table>
+            </div><!-- /content -->
+
+            <!-- content -->
+            <div class="content">
+                <table class="content-head" bgcolor="">
+                    <tr>
+                        <td>QUE LEER ESTA SEMANA</td>
+                    </tr>
+                </table>
+                <table bgcolor="">
+                    <tr>
+                        <td class="small" width="25%" style="vertical-align: top; padding-right:10px;"><img
+                            src="http://placehold.it/150x107"/></td>
+                        <td>
+                            <h4>Title Ipsum</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh
+                                ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor
+                                ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor
+                                fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec sed odio
+                                dui.</p>
+
+                            <p>Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis
+                                parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue.
+                                Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.</p>
+                        </td>
+                    </tr>
+                </table>
+
+            </div><!-- /content -->
+
+
+            <!-- content -->
+            <div class="content">
+                <table class="content-head" bgcolor="">
+                    <tr>
+                        <td>EL DEBATE QUE MÁS SE MOVIO</td>
+                    </tr>
+                </table>
+                <table bgcolor="">
+                    <tr>
+                        <td>
+                            <h4>Title Ipsum</h4>
+                            <p class="serif">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit
+                                non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id
+                                elit. Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit libero, a
+                                pharetra augue. Sed posuere consectetur est at lobortis.</p>
+                        </td>
+                    </tr>
+                </table>
+                <table class="debate" bgcolor="">
+                    <tr>
+                        <td width="45%">
+                            <p>"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                mus."</p>
+                            <table bgcolor="">
+                                <tr>
+                                    <td width="50">
+                                        <img class="debate-avatar" src="http://placehold.it/50x50" alt=""/>
+                                    </td>
+                                    <td>
+                                        <h5>Andrei Gomez Suarez</h5>
+                                        <small class="debate-date">Martes, 19 SEPT. 2017</small>
+                                        <a class="btn">RESPONDER</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="35" class="vs-col" align="center">
+                            <div class="line"></div>
+                            <div class="vs">VS</div>
+                        </td>
+                        <td width="45%">
+                            <p>"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum."</p>
+                            <table bgcolor="">
+                                <tr>
+                                    <td width="50">
+                                        <img class="debate-avatar" src="http://placehold.it/50x50" alt=""/>
+                                    </td>
+                                    <td>
+                                        <h5>Andrei Gomez Suarez</h5>
+                                        <small class="debate-date">Martes, 19 SEPT. 2017</small>
+                                        <a class="btn">RESPONDER</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <a href="/" class="debate-btn">
+                    <img
+                        src="http://lasillavacia.com/sites/all/themes/lasillavacia/sillallena/images/iconos/Iconos_debate.svg"
+                        width="30" alt="">
+                    <span>PARTICIPAR EN AL DEBATE</span>
+                </a>
+
+            </div><!-- /content -->
+
+            <!-- content -->
+            <div class="content">
+                <table class="content-head-grey" bgcolor=""></table>
+                <table bgcolor="">
+                    <tr>
+                        <td align="center">
+                            <h3 class="serif">Ver más historias y opiniones</h3>
+                            <a class="transparent-btn" href="/">IR A LA SILLA VACÍA</a>
+
+                            <h3 class="serif">Ver más artículos y debates de nuestros expertos</h3>
+                            <a class="transparent-btn last" href="/">IR A LA SILLA VACÍA</a>
+                        </td>
+                    </tr>
+                </table>
+
+            </div><!-- /content -->
+
+            <!-- content -->
+            <div class="content">
+                <table class="content-head-grey" bgcolor=""></table>
+                <table class="content-logos" bgcolor="">
+                    <tr>
+                        <td align="center">
+                            <a href="http://www.alqueria.com.co/">
+                                <img src="http://lasillavacia.com/sites/default/files/patrocinios_red/patrocinio6.jpg"
+                                     alt="patrocinios">
+                            </a>
+                        </td>
+                        <td align="center">
+                            <a href="http://www.corporacionpba.org/portal/index.php">
+                                <img src="http://lasillavacia.com/sites/default/files/patrocinios_red/patrocinio8.jpg"
+                                     alt="patrocinios">
+                            </a>
+                        </td>
+                        <td align="center">
+                            <a href="https://www.finagro.com.co/">
+                                <img src="http://lasillavacia.com/sites/default/files/patrocinios_red/patrocinio5.jpg"
+                                     alt="patrocinios">
+                            </a>
+                        </td>
+                        <td align="center">
+                            <a href="http://fundacionpervivir.com/">
+                                <img src="http://lasillavacia.com/sites/default/files/patrocinios_red/patrocinio7.jpg"
+                                     alt="patrocinios">
+                            </a>
+                        </td>
+                        <td align="center">
+                            <a href="https://www.facebook.com/gdrcolombia">
+                                <img src="http://lasillavacia.com/sites/default/files/patrocinios_red/patrocinio9.jpg"
+                                     alt="patrocinios">
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table class="content-head-grey" bgcolor=""></table>
+            </div><!-- /content -->
+
+
+        </td>
+        <td></td>
+    </tr>
+</table><!-- /BODY -->
+
+
+<!-- FOOTER -->
+<table class="footer-wrap">
+    <tr>
+        <td></td>
+        <td class="container">
+            <!-- content -->
+            <div class="content">
+                <table>
+                    <tr>
+                        <td align="center">
+                            <p style="color:#898d90;margin-bottom:20px;margin-top:5px;font-family:'Roboto Slab',serif; text-align: center;">
+                                Usted esta recibiendo este boletín porque se suscribió en <a
+                                href="http://lasillavacia.com" style="color: #898d90"
+                                target="_blank">lasillallena.com</a> con su dirección de correo ellectrónico:
+                                <a
+                                    href="mailto:paolavallaneda@gmail.com"
+                                    style="color:#898d90;text-decoration:none;padding-right:10px;font-family:'Roboto Slab',serif;font-size:14px;letter-spacing:1px"
+                                    target="_blank">
+                                    paolavallaneda@gmail.com
+                                </a>
+                            </p>
+                            <p>
+                                <a href="http://lasillavacia.com/newsletter/confirm/remove/e0e5c77edd32316t7108"
+                                   style="color:#898d90;text-decoration:none;padding-right:10px;font-family:'Roboto Slab',serif;font-size:10px;letter-spacing:1px"
+                                   target="_blank">
+                                    Cancelar suscripcion
+                                </a>
+                                <a href="http://lasillavacia.com/track/click/7527/32316"
+                                   style="color:#898d90;text-decoration:none;border-left:1px solid #898d90;padding-left:10px;font-family:'Roboto Slab',serif;font-size:10px;letter-spacing:1px"
+                                   target="_blank">
+                                    Politicas de privacidad
+                                </a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="center">
+                            <img
+                                src="http://lasillavacia.com/sites/all/themes/lasillavacia/imagesboletin1/logo2.png"
+                                alt="" width="180">
+                            <p style="color:#898d90;font-family:'Roboto Slab',serif;font-size:14px;">
+                                Copyright La Silla Vacía todos los derechos reservados
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div><!-- /content -->
+
+        </td>
+        <td></td>
+    </tr>
+</table><!-- /FOOTER -->
+
+</body>
+</html>
